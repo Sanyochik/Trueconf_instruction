@@ -4,10 +4,10 @@
 const server = "https://45.147.178.90";
 
 // OAuth2 app ID
-const client_id = "afe0f82dfeaa9817d50a9605be049a30725a59df";
+const client_id = "OAuth2Clientid";
 
 // OAuth2 app secret key
-const client_secret = "2c44bb7b10d8ed884647c6eebb6aa886da00d375";
+const client_secret = "OAuth2ClientSecret";
 
 const group_name = "operators";
 
