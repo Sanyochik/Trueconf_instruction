@@ -1,0 +1,35 @@
+1.Скачал RPM установщик для Centos 8
+https://trueconf.ru/download/build/tcsl/trueconf-server-4.7.4.11-el8.x86_64_652ef27b88930a8457c31f398238c924.rpm
+2.Загрузил файл на сервер в папку root
+3.Прописал команду установки
+dnf install -y название файла.rpm
+4.Создал нового юзера в Linux
+sudo adduser user
+sudo passwd user
+5.Добавил пользователя user через запятую после root в файл /etc/group около tcadmins:x:1000:root
+6.Выключить сервер командами
+systemctl stop trueconf
+systemctl stop trueconf-web
+7.Заменил содержимое файла local_only_admin_24.conf по адресу /opt/trueconf/server/etc/webmanager/opt (в случае чего есть файл можно перезаписать)
+<Location /admin>
+#	Require local
+#	Require ip 10.0.0.0/8
+#	Require ip 192.168.0.0/16
+#	Require ip 172.16.0.0/12
+</Location>
+8.Включить сервер командами
+systemctl start trueconf
+systemctl start trueconf-web
+9.Авторизовался на сервере по доступ к сайту осуществляется по ip адресу
+10.Запросил новый ключ у поддержки Trueconf
+Сервер установлен
+Настройки:
+1.web->Безопасность и убрал доступ только для определённых ip адресов
+2.Пользователи->Аккаунты пользователей создал менеджеров
+3.web->HTTPS создать само подписанный сертификат и использовать его
+4.web->Настройки заменил http на https
+5.API->OAuth2 создал новое приложение OAuth2
+6.Скачал с github заготовку на JS Contact_center_API
+https://github.com/TrueConf/contact_center_api
+7.В коде саченного примера заменил DNS сервер на ip сервера указанный в разделе web->Настройки
+8.Также заменил значение client_id и client_secret на соответствующие значения из раздела API->OAuth2
