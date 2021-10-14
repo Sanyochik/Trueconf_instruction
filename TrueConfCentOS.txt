@@ -31,5 +31,5 @@ systemctl start trueconf-web
 5.API->OAuth2 создал новое приложение OAuth2
 6.Скачал с github заготовку на JS Contact_center_API
 https://github.com/TrueConf/contact_center_api
-7.В коде саченного примера заменил DNS сервер на ip сервера указанный в разделе web->Настройки
+7.В коде скаченного примера заменил DNS сервер на ip сервера указанный в разделе web->Настройки
 8.Также заменил значение client_id и client_secret на соответствующие значения из раздела API->OAuth2
