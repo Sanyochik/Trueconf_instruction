@@ -33,3 +33,6 @@ systemctl start trueconf-web
 https://github.com/TrueConf/contact_center_api
 7.В коде скаченного примера заменил DNS сервер на ip сервера указанный в разделе web->Настройки
 8.Также заменил значение client_id и client_secret на соответствующие значения из раздела API->OAuth2
+ОЧЕНЬ ВАЖНО!!!
+в функции createconferenceobject()
+Я изменил ссылку к источнику обращения с api 3.1 на api 3.5
